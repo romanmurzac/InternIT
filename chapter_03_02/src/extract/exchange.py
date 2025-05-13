@@ -32,7 +32,7 @@ def load_data(data: list) -> None:
     conn = psycopg2.connect(
         dbname="internit_db",
         user="postgres",
-        password="Zaqwsx!32",
+        password="placeholder",
         host="localhost",
         port=5432
     )
