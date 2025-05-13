@@ -1,0 +1,29 @@
+INSERT INTO raw.internit_data (
+    transaction_id
+    ,first_name
+    ,last_name
+    ,user_id
+    ,personal_number
+    ,birth_date
+    ,city
+    ,iban
+    ,amount
+    ,currency_code
+    ,currency_to
+    ,type
+    ,time
+) VALUES (
+    %s
+    ,%s
+    ,%s
+    ,%s
+    ,%s
+    ,%s
+    ,%s
+    ,%s
+    ,%s
+    ,%s
+    ,%s
+    ,%s
+    ,%s
+);

@@ -42,15 +42,15 @@ The data sources for the company are:
 
 | Column Name | Data Type | Description |
 | ----- | ----- | ----- |
-| transaction_id | INT | Unique identifier of the transaction |
+| transaction_id | VARCHAR(50) | Unique identifier of the transaction |
 | first_name | VARCHAR(255) | Customer first name |
 | last_name | VARCHAR(255) | Customer last name |
 | user_id | VARCHAR(20) | Platform user identifier name |
 | personal_number | INT | Personal numerical identifier |
-| birth_date | TIMESTAMP | Birth date |
-| city | VARCHAR(50)  | User's city |
-| iban | INT | Bank account number |
-| amount | DECIMAL | Amount of money of the transaction |
+| birth_date | DATE | Birth date |
+| city | VARCHAR(50) | User's city |
+| iban | VARCHAR(25) | Bank account number |
+| amount | INT | Amount of money of the transaction |
 | currency_code | VARCHAR(3) | Currency code used in the transaction |
 | currency_to | VARCHAR(3) | Currency code used in the exchange transaction |
 | type | VARCHAR(15) | Type of the transaction |
@@ -61,9 +61,8 @@ The data sources for the company are:
 
 | Column Name | Data Type | Description |
 | ----- | ----- | ----- |
-| time_last_update_unix | TIMESTAMP | Unix timestamp from when data are avilable |
-| time_next_update_unix | TIMESTAMP | Unix timestamo until when data are available |
-| base_code | VARCHAR(3) | Reference currency code |
+| time_last_update_unix | INT | Unix timestamp from when data are avilable |
+| time_next_update_unix | INT | Unix timestamo until when data are available |
 | currency_code | VARCHAR(3) | Standard currency code |
 | currency_rate | DECIMAL | Price of the currency vs reference currency |
 
