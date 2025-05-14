@@ -61,7 +61,7 @@ The data sources for the company are:
 
 | Column Name | Data Type | Description |
 | ----- | ----- | ----- |
-| time_last_update_unix | INT | Unix timestamp from when data are avilable |
+| time_last_update_unix | INT | Unix timestamp from when data are available |
 | time_next_update_unix | INT | Unix timestamo until when data are available |
 | currency_code | VARCHAR(3) | Standard currency code |
 | currency_rate | DECIMAL | Price of the currency vs reference currency |
