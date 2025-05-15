@@ -1,0 +1,1 @@
+GRANT USAGE ON SCHEMA trusted to de_role;
