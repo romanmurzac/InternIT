@@ -22,7 +22,7 @@ To select archived data from `dim_rate_archive` table use the code from `src/sel
 Updated `src/insert_data_nonpii.sql` and `src/insert_data_pii.sql` files to ensure data quality by removing records that contain NULL values.
 
 ## Check Data Security
-See [chapter_03_04](./chapter_03_04/src/roles/).
+See [chapter_03_04](../chapter_03_04/src/roles/).
 
 ## Resources
 [What is Data Governance? by Google Cloud](https://cloud.google.com/learn/what-is-data-governance)\
