@@ -1,0 +1,1 @@
+DELETE FROM staging.dim_rate WHERE valid_from < CURRENT_DATE;

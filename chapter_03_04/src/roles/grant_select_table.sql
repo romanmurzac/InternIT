@@ -1,1 +1,1 @@
-GRANT USAGE ON SCHEMA trusted to de_role;
+GRANT SELECT ON trusted.top_10_currencies TO de_role;
