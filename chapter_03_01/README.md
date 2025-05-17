@@ -90,3 +90,9 @@ The data sources for the company are:
 | font_arial | TEXT | Symbol of the currency in Arial |
 | unicode_decimal | TEXT | Decimal unicode of the currency |
 | unicode_hex | TEXT | Hex unicode of the currency |
+
+### Create Server
+Open *pgAdmin 4* and press right-click on `Servers` option, choose `Register` --> `Server`. Introduce the name *InternIT* for the `Name` under `General` section. In `Connection` section use *localhost* as `Host name`. Introduce the password that we setup when installed *PostgreSQL*. Press `Save`.
+
+### Create Database
+Under *InternIT* server press right-click on `Databases` and choose `Create` --> `Database`. Introduce the name *internit_db* for the `Database` under `General` section. Press `Save`.
