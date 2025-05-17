@@ -8,6 +8,30 @@ This repository is intended for students participating in a Big Data internship 
 * Work on real-world datasets and projects.
 * Track their progress and document their learning journey.
 
+## Scenario
+You are a **Data Engineer** at **InternIT**, a fast-growing Romanian startup revolutionizing the **online banking** sector. InternIT provides a suite of digital banking services, including personal and business accounts, instant payments, virtual cards, and AI-powered financial insights. The company is committed to delivering secure, scalable, and user-friendly banking experiences to a growing customer base across Romania and Eastern Europe.
+
+As part of the **Data Engineering team**, your role is critical in building and maintaining the data infrastructure that powers InternIT’s analytics, reporting, and real-time decision-making systems. You work closely with data analysts, software engineers, and compliance officers to ensure that data is:
+
+* **Accurately collected** from various sources (e.g., transaction logs, user activity, third-party APIs, web scrapping).
+* **Securely stored** in structured and scalable data warehouses.
+* **Efficiently processed** using ETL/ELT pipelines.
+* **Governed and compliant** with financial regulations such as GDPR and PSD2.
+
+### Business Context
+InternIT operates in a highly regulated and competitive environment. The company’s success depends on its ability to:
+* Monitor and analyze customer behavior in real time.
+* Detect fraudulent transactions using machine learning.
+* Generate regulatory reports with high accuracy.
+* Provide personalized financial recommendations.
+
+### Internship Mission
+During internship, intern will:
+* Learn the fundamentals of **data warehousing, ETL/ELT, and data governance**.
+* Work on simulated and real-world datasets to build **data pipelines**.
+* Explore tools like **Git, GitHub, PostgreSQL, Python, VS Code,** and **pgAdmin 4**.
+* Contribute to the design of a **mini data platform** that supports InternIT’s banking operations.
+
 ## Structure
 Each chapter is self-contained and includes:
 * **README.md**: A detailed explanation of the day's objectives, concepts covered, and instructions for practical tasks.
