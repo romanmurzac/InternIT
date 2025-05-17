@@ -1,41 +1,54 @@
 # Data Warehousing
+Introduce interns to the fundamentals of data warehousing and its role in supporting analytical decision-making in a financial context.
 
-## Scenario
-You are a Data Engineer in the InternIT company. The InternIT company is a Romanian StartUp in **online banking** and offers banking services for the customers.
+## Resources
+[What is a Data Warehouse? by IBM](https://www.ibm.com/topics/data-warehouse)\
+[Evolution of the Modern Data Warehouse by Paige Roberts on Medium](https://medium.com/@paigeonthewing/evolution-of-the-modern-data-warehouse-f8b8d616149d)\
+[Top 6 Data Warehouses and Best Picks for a Modern Data Stack on Weld Blog](https://weld.app/blog/top-5-data-warehouses)\
+[Data Lake vs Data Warehouse vs Data Mart - Difference Between Cloud Storage Solutions by AWS](https://aws.amazon.com/compare/the-difference-between-a-data-warehouse-data-lake-and-data-mart/)\
+[OLAP vs. OLTP: The Differences by Snowflake](https://www.snowflake.com/guides/olap-vs-oltp)\
+[Data Warehouse Concepts: Kimball vs. Inmon Approach on Astera](https://www.astera.com/type/blog/data-warehouse-concepts/)
+
+## To Do List
+* Learn the core concepts of data warehousing, including OLAP vs OLTP, and dimensional modeling.
+* Explore how data warehouses are used in banking to store and analyze large volumes of transaction data.
+* Design the source tables and the raw schema (e.g., `internit_data`, `exchange_data`, `xe_data`).
+* Use SQL to simulate loading data into a warehouse and perform basic analytical queries.
+* Understand how data warehousing supports InternIT’s business goals such as currency trend analysis and transaction reporting.
 
 ## Business requirements
-InternIT company provides a financial platform for currency transactions and provides financial consultance for their customers.
+**InternIT** is a Romanian fintech startup offering a digital platform for **currency transactions** and **financial** consultancy. The platform supports real-time trading, historical analysis, and personalized insights for customers engaging in foreign exchange operations.
 
 ### Core Business Goals
-1. **Currencies analysis** - Aggregate currencies evolution.
-2. **Currencies insights** - Track trends in currencies demand.
-3. **Prices trends** - Provide benchmarks for different currencies.
-4. **Currencies popularity** - Determine which currencies are most in demand.
+1. **Currencies analysis** - Aggregate and analyze the evolution of various currencies over time.
+2. **Currencies insights** - Identify and track trends in currency demand and usage.
+3. **Prices trends** - Provide historical and real-time benchmarks for currency prices.
+4. **Currencies popularity** - Determine which currencies are most frequently traded or requested.
 
 #### Reports
-Buy transactions by currency.\
-Sell transactions by currency.\
-Price evolution of top 10 currencies.
+* **Buy Transactions by Currency** - Breakdown of all buy-side transactions grouped by currency.
+* **Sell Transactions by Currency** - Breakdown of all sell-side transactions grouped by currency.
+* **Price Evolution of Top 10 Currencies** - Historical price trends for the most traded currencies.
 
 #### Dashboards
-Current RON price vs other currencies.\
-Maximum and minum price on current day of the RON.\
-Historical price evolution of the RON.
+* **Current RON Price vs Other Currencies** - Real-time comparison of the Romanian Leu (RON) against major currencies.
+* **Max/Min RON Price Today** - Daily high and low values of RON across all tracked currencies.
+* **Historical RON Price Evolution** - Time-series visualization of RON’s performance over time.
 
 #### KPIs
-Total currencies transactions.\
-Average transaction amount.\
-Top 10 amount transactions on buy.\
-Top 10 amount transaction on sell.
+* **Total Currency Transactions** - Total number of buy and sell transactions across all currencies.
+* **Average Transaction Amount** - Mean value of all currency transactions.
+* **Top 10 Buy Transactions** - Highest-value buy-side transactions.
+* **Top 10 Sell Transactions** - Highest-value sell-side transactions.
 
 ## Data Warehouse Design
-It has a server `InternIT` and a database named `internit_db`.
+Design the foundational structure of InternIT’s data warehouse, which will serve as the central repository for analytical data used in currency transactions and financial insights. It has a server `InternIT` and a database named `internit_db`.
 
 ### Sources
 The data sources for the company are:
-- InterIT - Own Platform data.
-- [ExchangeRate](https://www.exchangerate-api.com/) - Partner Platform for today traditional currencies rates.
-- [XE](https://www.xe.com/symbols/) - Partner Platform for currencies names and symbols.
+- **InternIT** - Internal platform generating transactional data (buy/sell operations, customer activity).
+- **[ExchangeRate](https://www.exchangerate-api.com/)** - External partner providing daily exchange rates for traditional currencies.
+- **[XE](https://www.xe.com/symbols/)** - External partner offering metadata such as currency names and symbols.
 
 #### InternIT source
 `internit_data`
@@ -78,10 +91,8 @@ The data sources for the company are:
 | unicode_decimal | TEXT | Decimal unicode of the currency |
 | unicode_hex | TEXT | Hex unicode of the currency |
 
-## Resources
-[What is a Data Warehouse? by IBM](https://www.ibm.com/topics/data-warehouse)\
-[Evolution of the Modern Data Warehouse by Paige Roberts on Medium](https://medium.com/@paigeonthewing/evolution-of-the-modern-data-warehouse-f8b8d616149d)\
-[Top 6 Data Warehouses and Best Picks for a Modern Data Stack on Weld Blog](https://weld.app/blog/top-5-data-warehouses)\
-[Data Lake vs Data Warehouse vs Data Mart - Difference Between Cloud Storage Solutions by AWS](https://aws.amazon.com/compare/the-difference-between-a-data-warehouse-data-lake-and-data-mart/)\
-[OLAP vs. OLTP: The Differences by Snowflake](https://www.snowflake.com/guides/olap-vs-oltp)\
-[Data Warehouse Concepts: Kimball vs. Inmon Approach on Astera](https://www.astera.com/type/blog/data-warehouse-concepts/)
+### Create Server
+Open *pgAdmin 4* and press right-click on `Servers` option, choose `Register` --> `Server`. Introduce the name *InternIT* for the `Name` under `General` section. In `Connection` section use *localhost* as `Host name`. Introduce the password that we setup when installed *PostgreSQL*. Press `Save`.
+
+### Create Database
+Under *InternIT* server press right-click on `Databases` and choose `Create` --> `Database`. Introduce the name *internit_db* for the `Database` under `General` section. Press `Save`.
